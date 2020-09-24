@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Mitr";
+  src: url("../fonts/Mitr-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mitr";
+  src: url("../fonts/Mitr-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BrowalliaUPC";
+  src: url("../fonts/BrowaUPC.ttf") format("ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BrowalliaUPC";
+  src: url("../fonts/BrowabUPC.ttf") format("ttf");
+  font-weight: 500;
+}
+
+*,
+body {
+    font-family: 'Mitr', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.stageBackground{
+  width: 100vw;
+  height: 100vh;
+  background-color: #808080;
+  background-size: cover;
+  background-position: center center;
+}
+.stageBackground.stage0{
+  background-image: url('../images/backgrounds/stage0.jpg');
+}
+.stageBackground.stage1{
+  background-color: #00ff00;
+}
+.stageBackground.stage2{
+  background-color: #0000ff;
+}
