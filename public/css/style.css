@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: "Mitr";
   src: url("../fonts/Mitr-Regular.ttf") format("ttf");
@@ -21,23 +23,311 @@
 
 *,
 body {
-    font-family: 'Mitr', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+  font-family: "Mitr", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
-.stageBackground{
+body {
+  background-image: url("../images/backgrounds/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stageBackground {
   width: 100vw;
   height: 100vh;
-  background-color: #808080;
+  background-color: transparent;
   background-size: cover;
   background-position: center center;
 }
-.stageBackground.stage0{
-  background-image: url('../images/backgrounds/stage0.jpg');
+.padding-top {
+  padding-top: 4rem;
 }
-.stageBackground.stage1{
-  background-color: #00ff00;
+.stageBackground.stage0 {
+  background-image: url("../images/backgrounds/stage0.jpg");
 }
-.stageBackground.stage2{
-  background-color: #0000ff;
+.stageBackground.stage1 {
+  background-image: url("../images/backgrounds/stage1.jpg");
+}
+.stageBackground.stage2 {
+  background-image: url("../images/backgrounds/stage2.jpg");
+}
+.stageBackground.stage3 {
+  background-image: url("../images/backgrounds/stage3.jpg");
+}
+.stageBackground.stage4 {
+  background-image: url("../images/backgrounds/stage4.jpg");
+}
+.stageBackground.stage5 {
+  background-image: url("../images/backgrounds/stage5.jpg");
+}
+.stageBackground.stage6.result1 {
+  background-image: url("../images/backgrounds/result1.jpg");
+}
+.stageBackground.stage6.result2 {
+  background-image: url("../images/backgrounds/result2.jpg");
+}
+.stageBackground.stage6.result3 {
+  background-image: url("../images/backgrounds/result3.jpg");
+}
+.stageBackground.stage6.result4 {
+  background-image: url("../images/backgrounds/result4.jpg");
+}
+.stageBackground.stage6.result5 {
+  background-image: url("../images/backgrounds/result5.jpg");
+}
+.stageBackground.stage6.result6 {
+  background-image: url("../images/backgrounds/result6.jpg");
+}
+.stageBackground.stage6.result7 {
+  background-image: url("../images/backgrounds/result7.jpg");
+}
+.stageBackground.stage6.result8 {
+  background-image: url("../images/backgrounds/result8.jpg");
+}
+.titleLogo {
+  width: 100%;
+  max-width: 100%;
+}
+.txtTitle {
+  font-size: 34px;
+  font-weight: 500;
+  font-family: "Kanit";
+  text-align: center;
+}
+.txtHeaderIntro {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "BrowalliaUPC";
+  text-align: center;
+}
+.txtIntro {
+  font-size: 28px;
+  font-family: "BrowalliaUPC";
+  text-align: center;
+  margin-bottom: 0;
+}
+.boxContainStage0 {
+  width: 100%;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.momentum_corner {
+  width: 200px;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.btn.btnStart {
+  background-color: #0000fe;
+  color: #ffffff;
+  font-size: 24px;
+  min-width: 150px;
+  margin-top: 1.5rem;
+  font-family: "Kanit";
+}
+.btn.btnStart:hover {
+  background-color: #2323e2;
+  color: #ffffff;
+}
+.btn.btnAnswer {
+  text-align: left;
+  font-size: 22px;
+  font-family: "Kanit";
+  padding: 0.2rem 0.2rem;
+}
+.btn.btnAnswer:hover {
+  background-color: rgba(249, 113, 179, 0.5);
+}
+.stageBackground.stage3 .btn.btnAnswer {
+  color: #ffffff;
+}
+.txtQuiz {
+  font-family: "Kanit";
+  font-size: 38px;
+  font-weight: 700;
+  color: #0000fe;
+}
+.titleTxtAnswer {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0000fe;
+  font-family: "Kanit";
+  margin-bottom: 0.25rem;
+}
+.titleSubTxtAnswer {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  font-family: "Kanit";
+  margin-bottom: 0.5rem;
+}
+.stageBackground.stage3 .titleSubTxtAnswer {
+  color: #ffffff;
+}
+.txtAnswer {
+  font-size: 18px;
+  font-family: "Kanit";
+}
+.stageBackground.stage3 .txtAnswer {
+  color: #ffffff;
+}
+.btn.btnNext {
+  width: 100px;
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  z-index: 9;
+}
+.btn.btnNext img {
+  max-width: 100%;
+  width: 100%;
+}
+.ulNavigator {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ulNavigator li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.ulNavigator li div {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #d1d3d4;
+  border-radius: 50%;
+}
+.ulNavigator li div.done {
+  background-color: #0000fe;
+}
+@media (max-width: 767px) {
+  .momentum_corner {
+    width: 130px;
+    top: 1rem;
+    right: 1rem;
+  }
+  .txtTitle {
+    font-size: 24px;
+  }
+  .txtHeaderIntro {
+    font-size: 22px;
+    margin-bottom: 0.25rem;
+  }
+  .txtIntro {
+    font-size: 22px;
+  }
+  .boxContainStage0 {
+    padding-bottom: 200px;
+  }
+  .txtQuiz {
+    font-size: 24px;
+  }
+  .btn.btnAnswer {
+    font-size: 18px;
+  }
+  .titleTxtAnswer {
+    font-size: 30px;
+  }
+  .titleSubAnswer {
+    font-size: 20px;
+  }
+  .txtAnswer {
+    font-size: 16px;
+  }
+  .boxNavigator {
+    bottom: 105px;
+  }
+  .btn.btnNext {
+    width: 80px;
+    left: calc(50% - 40px);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .boxContainStage0 {
+    padding-bottom: 280px;
+  }
+  .boxNavigator {
+    bottom: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .stageBackground {
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background-position: center bottom;
+    padding-top: 3rem;
+  }
+  .stageBackground.stage0 {
+    background-image: url("../images/backgrounds/stage0_mobile.png");
+    padding-top: 0;
+  }
+  .stageBackground.stage1 {
+    background-image: url("../images/backgrounds/stage1_mobile.png");
+  }
+  .stageBackground.stage2 {
+    background-image: url("../images/backgrounds/stage2_mobile.jpg");
+  }
+  .stageBackground.stage3 {
+    background-image: url("../images/backgrounds/stage3_mobile.jpg");
+  }
+  .stageBackground.stage4 {
+    background-image: url("../images/backgrounds/stage4_mobile.jpg");
+  }
+  .stageBackground.stage5 {
+    background-image: url("../images/backgrounds/stage5_mobile.jpg");
+  }
+  .boxNavigator {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+  .boxNavigator .ulNavigator {
+    justify-content: center;
+  }
+  .boxStage5 {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .boxNavigator {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+  }
+  
+}
+@media (min-width: 992px) and (max-width: 1299px) {
+  .boxContainStage0 {
+    background-image: url("../images/backgrounds/bg.jpg");
+    padding: 1rem;
+  }
+}
+@media (min-width: 1300px) {
+  .stageBackground.stage3 .txtQuiz {
+    padding-right: 30%;
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1500px) {
+  .titleLogo {
+    max-width: 800px;
+  }
+  .txtTitle {
+    font-size: 24px;
+  }
+  .txtHeaderIntro {
+    font-size: 24px;
+  }
+  .txtIntro {
+    font-size: 24px;
+  }
 }
