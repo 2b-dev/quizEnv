@@ -31,8 +31,8 @@ class Quiz extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stage: 0,
-      result: 0,
+      stage: 6,
+      result: 1,
       showq: true,
       showa: false,
       answer: 0,
@@ -47,7 +47,9 @@ class Quiz extends React.Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    
+  }
 
   componentWillUnmount() {}
 
@@ -85,10 +87,69 @@ class Quiz extends React.Component {
     this.setState({ answer: 0 });
   };
   _genResult = () => {
-    console.log("Gen");
+    let arr = [
+      this.state.geo,
+      this.state.wind,
+      this.state.nuclear,
+      this.state.water,
+      this.state.solar,
+      this.state.bio,
+      this.state.waste,
+    ];
+    //let indexOfMaxValue = arr.indexOf(Math.max(...arr));
+    let MaxValue = Math.max(...arr);
+    console.log("ค่าสูงสุด : " + MaxValue);
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === MaxValue) {
+        count++;
+      }
+    }
+    if(count >= 2){
+      this.setState({resultPath: 'duplicate'});
+      this.setState({result: 8})
+      console.log('มีค่าสูงสุดซ้ำกัน ตอบ 8')
+    }else{
+      let indexOfMaxValue = arr.indexOf(Math.max(...arr));
+      if(indexOfMaxValue === 0){
+        this.setState({resultPath: 'geo'});
+        this.setState({result: 1})
+        console.log('geo');
+      }
+      if(indexOfMaxValue === 1){
+        this.setState({resultPath: 'wind'});
+        this.setState({result: 2})
+        console.log('wind');
+      }
+      if(indexOfMaxValue === 2){
+        this.setState({resultPath: 'nuclear'});
+        this.setState({result: 3})
+        console.log('nuclear');
+      }
+      if(indexOfMaxValue === 3){
+        this.setState({resultPath: 'water'});
+        this.setState({result: 4})
+        console.log('water');
+      }
+      if(indexOfMaxValue === 4){
+        this.setState({resultPath: 'solar'});
+        this.setState({result: 5})
+        console.log('solar');
+      }
+      if(indexOfMaxValue === 5){
+        this.setState({resultPath: 'bio'});
+        this.setState({result: 6})
+        console.log('bio');
+      }
+      if(indexOfMaxValue === 6){
+        this.setState({resultPath: 'waste'});
+        this.setState({result: 7})
+        console.log('waste');
+      }
+    }
   };
-  
-  render() {    
+
+  render() {
     const backgroundStage =
       "stageBackground stage" +
       this.state.stage +
@@ -749,6 +810,19 @@ class Quiz extends React.Component {
                 </div>
               </div>
             )}
+            {this.state.stage === 6 && (
+              <div className="container">
+                <div className="row justify-content-center justify-content-lg-start pt-5">
+                  <div className="col-12 col-md-10 col-lg-6 text-left pt-4">
+                    <p>‘พลังงานทดแทน’</p>
+                    <p>ที่ซ่อนอยู่ในตัวคุณคือ</p>
+                    <p>พลังงานความร้อนใต้พิภพ</p>
+                    <p>ขุมทรัพย์ใต้ผืนโลก</p>
+                    <div className="boxDetailResualt"></div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </>
@@ -759,20 +833,19 @@ class Quiz extends React.Component {
 function Main() {
   return (
     <>
-    <div>
-      <Quiz />
-    </div>
+      <div>
+        <Quiz />
+      </div>
     </>
   );
 }
 
-
-function Geo() {  
+function Geo() {
   return (
     <>
-    <div>
-      <Quiz />
-    </div>
+      <div>
+        <Quiz />
+      </div>
     </>
   );
 }
