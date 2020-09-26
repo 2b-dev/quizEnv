@@ -15,7 +15,7 @@ import Helmet from "react-helmet";
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/momentum/ppt">
       <Switch>
         <Route exact path="/">
           <Main />
@@ -1079,7 +1079,7 @@ class Quiz extends React.Component {
                         <div className="row justify-content-center">
                           <FacebookShareButton
                             url={
-                              this.state.urlShare + "" + this.state.resultPath
+                              this.state.urlShare + "" + this.state.resultPath +".html"
                             }
                             hashtag={"#LetsPowerUpYourEnergyQuiz"}
                           >
@@ -1119,14 +1119,11 @@ function Main() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1136,8 +1133,6 @@ function Main() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/main.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="http://2b-dev.com/momentum/ppt/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
@@ -1149,8 +1144,6 @@ function Main() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/main.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1172,14 +1165,11 @@ function Geo() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1189,8 +1179,6 @@ function Geo() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/1.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="http://2b-dev.com/momentum/ppt/geo" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
@@ -1202,8 +1190,6 @@ function Geo() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/1.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1225,14 +1211,11 @@ function Wind() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1242,8 +1225,6 @@ function Wind() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/2.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="http://2b-dev.com/momentum/ppt/wind" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
@@ -1255,8 +1236,6 @@ function Wind() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/2.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1278,14 +1257,11 @@ function Nuclear() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1295,9 +1271,10 @@ function Nuclear() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/3.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/nuclear" />
+        <meta
+          property="og:url"
+          content="http://2b-dev.com/momentum/ppt/nuclear"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1308,8 +1285,6 @@ function Nuclear() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/3.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1331,14 +1306,11 @@ function Water() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1348,9 +1320,10 @@ function Water() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/4.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/water" />
+        <meta
+          property="og:url"
+          content="http://2b-dev.com/momentum/ppt/water"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1361,8 +1334,6 @@ function Water() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/4.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1384,14 +1355,11 @@ function Solar() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1401,9 +1369,10 @@ function Solar() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/5.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/solar" />
+        <meta
+          property="og:url"
+          content="http://2b-dev.com/momentum/ppt/solar"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1414,8 +1383,6 @@ function Solar() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/5.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1437,14 +1404,11 @@ function Bio() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1454,8 +1418,6 @@ function Bio() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/6.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="http://2b-dev.com/momentum/ppt/bio" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
@@ -1467,8 +1429,6 @@ function Bio() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/6.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1490,14 +1450,11 @@ function Waste() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1507,9 +1464,10 @@ function Waste() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/7.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/waste" />
+        <meta
+          property="og:url"
+          content="http://2b-dev.com/momentum/ppt/waste"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1520,8 +1478,6 @@ function Waste() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/7.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1543,14 +1499,11 @@ function Various() {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
         <title>Let's Power Up Your Energy</title>
         <meta
           name="description"
           content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Let's Power Up Your Energy" />
         <meta
           itemprop="description"
@@ -1560,9 +1513,10 @@ function Various() {
           itemprop="image"
           content="http://2b-dev.com/momentum/ppt/images/share/8.jpg"
         />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/various" />
+        <meta
+          property="og:url"
+          content="http://2b-dev.com/momentum/ppt/various"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Let's Power Up Your Energy" />
         <meta
@@ -1573,8 +1527,6 @@ function Various() {
           property="og:image"
           content="http://2b-dev.com/momentum/ppt/images/share/8.jpg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Let's Power Up Your Energy" />
         <meta
