@@ -12,6 +12,7 @@ import {
   TwitterIcon,
 } from "react-share";
 import Helmet from "react-helmet";
+import { Modal } from "react-bootstrap";
 
 function App() {
   return (
@@ -73,6 +74,7 @@ class Quiz extends React.Component {
       bio: 0,
       waste: 0,
       urlShare: "http://2b-dev.com/momentum/ppt/",
+      showLink: false,
     };
   }
 
@@ -176,7 +178,13 @@ class Quiz extends React.Component {
     }
     this.setState({ stage: 6 });
   };
-
+  toggleShowLink() {
+    //console.log("Show");
+    this.setState({ showLink: !this.state.showLink });
+  }
+  handleClose() {
+    this.setState({ showLink: false });
+  }
   render() {
     const backgroundStage =
       "stageBackground stage" +
@@ -1069,7 +1077,9 @@ class Quiz extends React.Component {
                       <div className="boxDetailResualtFooter">
                         <p>
                           ทำความรู้จักกับปิโตรเลียมและพลังงานทดแทนเพิ่มเติมได้ที่:{" "}
-                          <u>เว็บไซต์ ปตท.</u>
+                          <u onClick={this.toggleShowLink.bind(this)}>
+                            เว็บไซต์ ปตท.
+                          </u>
                         </p>
                         <p>
                           แชร์ผลลัพธ์ของคุณให้คนอื่นได้รู้ (share the result on
@@ -1079,7 +1089,10 @@ class Quiz extends React.Component {
                         <div className="row justify-content-center">
                           <FacebookShareButton
                             url={
-                              this.state.urlShare + "" + this.state.resultPath +".html"
+                              this.state.urlShare +
+                              "" +
+                              this.state.resultPath +
+                              ".html"
                             }
                             hashtag={"#LetsPowerUpYourEnergyQuiz"}
                           >
@@ -1110,6 +1123,52 @@ class Quiz extends React.Component {
             )}
           </div>
         </div>
+        <Modal show={this.state.showLink} onHide={this.handleClose.bind(this)}>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <p className="titleModal">ที่มาข้อมูล: </p>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p className="txtModal">
+              ส่วนสื่อสารกลุ่มธุรกิจปิโตรเลียมขั้นต้น,
+              ส่วนสื่อสารกลุ่มธุรกิจปิโตรเลียมขั้นปลาย,
+              กลุ่มธุรกิจโครงสร้างพื้นฐาน ฝ่ายสื่อสารองค์กร บริษัท ปตท. จำกัด
+              (มหาชน)
+            </p>
+            <a
+              href="https://www.pttgcgroup.com/storage/download/knowledge/book/pttgc-petrochemical-encyclopedia2011.pdf"
+              target="_blank"
+            >
+              <p className="txtModal">- pttgc-petrochemical-encyclopedia2011.pdf</p>
+            </a>
+            <a
+              href="https://www.pttgcgroup.com/storage/download/knowledge/book/20140909-pttgc-knowledge-petro-019.pdf"
+              target="_blank"
+            >
+              <p className="txtModal">- pttgc-knowledge-petro-019.pdf</p>
+            </a>
+            <a
+              href="https://www.pttgcgroup.com/storage/download/knowledge/publication/20140909-pttgc-knowledge-petro-001.pdf"
+              target="_blank"
+            >
+              <p className="txtModal">- pttgc-knowledge-petro-001.pdf</p>
+            </a>
+            <a
+              href="https://www.pttgcgroup.com/storage/download/knowledge/publication/20140909-pttgc-knowledge-petro-003.pdf"
+              target="_blank"
+            >
+              <p className="txtModal">- pttgc-knowledge-petro-003.pdf</p>
+            </a>
+            <a
+              href="https://pttplc-my.sharepoint.com/:f:/p/570206/Elb6SL81A75Mq0IJoB2LYPsBEW7QQ5xgqstlCC2K_VGlpQ?e=XkFvDJ"
+              target="_blank"
+            >
+              <p className="txtModal">- sharepoint file</p>
+            </a>
+            
+          </Modal.Body>
+        </Modal>
       </>
     );
   }

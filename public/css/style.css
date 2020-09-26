@@ -255,6 +255,18 @@ body {
 .btnFacebook{
   width: 34px;
 }
+.titleModal{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+  font-family: 'Kanit';
+  color: #000000;
+}
+.txtModal{
+  font-size: 16px;
+  font-family: 'Kanit';
+  color: #000000;
+}
 @media (max-width: 767px) {
   .momentum_corner {
     width: 130px;
@@ -331,6 +343,38 @@ body {
   }
   .stageBackground.stage5 {
     background-image: url("../images/backgrounds/stage5_mobile.jpg");
+  }
+  .txtResultTitle{
+    margin-top: 0;
+  }
+  .stageBackground.stage6{
+    background-position: center bottom;
+    background-size: cover;
+    padding-bottom: 8rem;
+  }
+  .stageBackground.stage6.result1 {
+    background-image: url("../images/backgrounds/result1_mobile.png");
+  }
+  .stageBackground.stage6.result2 {
+    background-image: url("../images/backgrounds/result2_mobile.png");
+  }
+  .stageBackground.stage6.result3 {
+    background-image: url("../images/backgrounds/result3_mobile.png");
+  }
+  .stageBackground.stage6.result4 {
+    background-image: url("../images/backgrounds/result4_mobile.png");
+  }
+  .stageBackground.stage6.result5 {
+    background-image: url("../images/backgrounds/result5_mobile.png");
+  }
+  .stageBackground.stage6.result6 {
+    background-image: url("../images/backgrounds/result6_mobile.png");
+  }
+  .stageBackground.stage6.result7 {
+    background-image: url("../images/backgrounds/result7_mobile.png");
+  }
+  .stageBackground.stage6.result8 {
+    background-image: url("../images/backgrounds/result8_mobile.png");
   }
   .boxNavigator {
     width: 100%;
