@@ -206,6 +206,55 @@ body {
 .ulNavigator li div.done {
   background-color: #0000fe;
 }
+.txtResultTitle{
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0;
+  font-family: 'Kanit';
+  margin-top: 2.5rem;
+}
+.txtResualtEnargy{
+  font-size: 50px;
+  font-weight: 700;
+  color: #0000fe;
+  font-family: 'Kanit';
+  margin-bottom: 0;
+}
+.txtSubResualtEnargy{
+  font-size: 32px;
+  font-weight: 500;
+  color: #000000;
+  font-family: 'Kanit';
+}
+.boxDetailResualt{  
+  border: 1px solid #000000;
+  margin-top: 2rem;
+  background-color: #000000;
+}
+.boxDetailResualt .boxDetailResualtBody{
+   padding: 1rem 1.5rem;
+   background-color: #dfdfd5;
+}
+.boxDetailResualt .boxDetailResualtBody p{
+  margin-bottom: 0;
+}
+.boxDetailResualt .boxDetailResualtFooter{
+  background-color: #000000;
+  padding: 1rem 1.5rem;
+}
+.boxDetailResualt .boxDetailResualtFooter p, .boxDetailResualt .boxDetailResualtFooter p u{
+  color: #ffffff;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.react-share__ShareButton{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.btnFacebook{
+  width: 34px;
+}
 @media (max-width: 767px) {
   .momentum_corner {
     width: 130px;
@@ -329,5 +378,8 @@ body {
   }
   .txtIntro {
     font-size: 24px;
+  }
+  .txtResultTitle{
+    margin-top: 0rem;
   }
 }
