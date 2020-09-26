@@ -11,6 +11,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "react-share";
+import Helmet from "react-helmet";
 
 function App() {
   return (
@@ -22,6 +23,27 @@ function App() {
         <Route exact path="/geo">
           <Geo />
         </Route>
+        <Route exact path="/wind">
+          <Wind />
+        </Route>
+        <Route exact path="/nuclear">
+          <Nuclear />
+        </Route>
+        <Route exact path="/water">
+          <Water />
+        </Route>
+        <Route exact path="/solar">
+          <Solar />
+        </Route>
+        <Route exact path="/bio">
+          <Bio />
+        </Route>
+        <Route exact path="/waste">
+          <Waste />
+        </Route>
+        <Route exact path="/various">
+          <Various />
+        </Route>
       </Switch>
     </Router>
   );
@@ -32,7 +54,7 @@ export default App;
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
-
+/// momentum/ppt
 class Quiz extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +64,7 @@ class Quiz extends React.Component {
       showq: true,
       showa: false,
       answer: 0,
-      resultPath: "geo",
+      resultPath: "",
       geo: 0,
       wind: 0,
       nuclear: 0,
@@ -111,7 +133,7 @@ class Quiz extends React.Component {
       }
     }
     if (count >= 2) {
-      this.setState({ resultPath: "duplicate" });
+      this.setState({ resultPath: "various" });
       this.setState({ result: 8 });
       console.log("มีค่าสูงสุดซ้ำกัน ตอบ 8");
     } else {
@@ -1096,16 +1118,474 @@ class Quiz extends React.Component {
 function Main() {
   return (
     <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/main.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/main.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/main.jpg"
+        />
+      </Helmet>
       <div>
         <Quiz />
       </div>
     </>
   );
 }
-
 function Geo() {
   return (
     <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/1.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/geo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/1.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/1.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Wind() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/2.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/wind" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/2.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/2.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Nuclear() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/3.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/nuclear" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/3.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/3.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Water() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/4.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/water" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/4.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/4.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Solar() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/5.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/solar" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/5.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/5.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Bio() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/6.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/bio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/6.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/6.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Waste() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/7.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/waste" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/7.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/7.jpg"
+        />
+      </Helmet>
+      <div>
+        <Quiz />
+      </div>
+    </>
+  );
+}
+function Various() {
+  return (
+    <>
+      <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>Let's Power Up Your Energy</title>
+        <meta
+          name="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Let's Power Up Your Energy" />
+        <meta
+          itemprop="description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          itemprop="image"
+          content="http://2b-dev.com/momentum/ppt/images/share/8.jpg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="http://2b-dev.com/momentum/ppt/various" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Let's Power Up Your Energy" />
+        <meta
+          property="og:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          property="og:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/8.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Let's Power Up Your Energy" />
+        <meta
+          name="twitter:description"
+          content="ในตัวคุณ 'มีพลังงานทดแทน' แบบไหนซ่อนอยู่"
+        />
+        <meta
+          name="twitter:image"
+          content="http://2b-dev.com/momentum/ppt/images/share/8.jpg"
+        />
+      </Helmet>
       <div>
         <Quiz />
       </div>
