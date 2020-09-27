@@ -248,6 +248,10 @@ body {
   margin-bottom: 0;
   font-size: 12px;
 }
+.boxDetailResualt .boxDetailResualtFooter p u a {
+  color: #ffffff;
+  font-size: 12px;
+}
 .react-share__ShareButton{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -400,6 +404,12 @@ body {
 }
 @media (min-width: 992px) and (max-width: 1299px) {
   .boxContainStage0 {
+    background-image: url("../images/backgrounds/bg.jpg");
+    padding: 1rem;
+  }
+}
+@media (min-width: 992px) and (max-height: 750px){
+  .boxContainStage0{
     background-image: url("../images/backgrounds/bg.jpg");
     padding: 1rem;
   }

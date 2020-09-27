@@ -13,7 +13,7 @@ import {
 } from "react-share";
 import Helmet from "react-helmet";
 import { Modal } from "react-bootstrap";
-
+//momentum/ppt
 function App() {
   return (
     <Router basename="/momentum/ppt">
@@ -195,7 +195,7 @@ class Quiz extends React.Component {
       <>
         <div className={backgroundStage}>
           <div className="">
-            <a href="https://themomentum.co/" target="_blank">
+            <a href="https://themomentum.co/" rel="noopener noreferer" target="_blank">
               <img
                 src={
                   this.state.stage === 3
@@ -290,7 +290,7 @@ class Quiz extends React.Component {
                     <div className="boxContainStage0">
                       <img
                         src="images/txtImage/title.png"
-                        className="titleLogo d-none d-lg-block"
+                        className="titleLogo d-none d-lg-block mx-auto"
                         alt="let's power up your energy"
                       />
                       <img
@@ -1077,13 +1077,13 @@ class Quiz extends React.Component {
                       <div className="boxDetailResualtFooter">
                         <p>
                           ทำความรู้จักกับปิโตรเลียมและพลังงานทดแทนเพิ่มเติมได้ที่:{" "}
-                          <u onClick={this.toggleShowLink.bind(this)}>
-                            เว็บไซต์ ปตท.
+                          <u><a href="https://www.pttplc.com" rel="noopener noreferer" target="_blank">
+                            ปตท.
+                            </a>
                           </u>
                         </p>
                         <p>
-                          แชร์ผลลัพธ์ของคุณให้คนอื่นได้รู้ (share the result on
-                          facebook, twitter) #พลังงานทดแทน #ปิโตรเลียม
+                          แชร์ผลลัพธ์ของคุณให้คนอื่นได้รู้ #พลังงานทดแทน #ปิโตรเลียม
                           #LetsPowerUpYourEnergyQuiz
                         </p>
                         <div className="row justify-content-center">
@@ -1104,9 +1104,12 @@ class Quiz extends React.Component {
                           </FacebookShareButton>
                           <TwitterShareButton
                             url={
-                              this.state.urlShare + "" + this.state.resultPath
+                              this.state.urlShare +
+                              "" +
+                              this.state.resultPath +
+                              ".html #พลังงานทดแทน #ปิโตรเลียม #LetsPowerUpYourEnergyQuiz"
                             }
-                            hashtag={"#LetsPowerUpYourEnergyQuiz"}
+                            //hashtag={"#LetsPowerUpYourEnergyQuiz"}
                           >
                             <img
                               src="images/icons/twitter.png"
